@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Proyecto.BLL.Services;
 using Proyecto.DAL.Data;
+using Proyecto.DAL.Repositories;
+using Proyecto.Models.Models;
 
 namespace Proyecto.API
 {
@@ -14,6 +17,10 @@ namespace Proyecto.API
             {
                 opciones.UseSqlServer(builder.Configuration.GetConnectionString("Connection"));
             });
+
+            //INYECCION DE DEPENDENCIAS
+            builder.Services.AddScoped<IGenericRepository<Vehiculo>, VehiculoRepository>();
+            builder.Services.AddScoped<IVehiculoService, VehiculoService>();
 
 
             builder.Services.AddControllers();
