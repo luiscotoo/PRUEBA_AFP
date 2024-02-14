@@ -3,6 +3,7 @@ using Proyecto.BLL.Services;
 using Proyecto.Models.Models;
 using Microsoft.AspNetCore.Http;
 using System.Runtime.CompilerServices;
+using Microsoft.OpenApi.Validations;
 
 namespace Proyecto.API.Controllers
 {
@@ -63,13 +64,17 @@ namespace Proyecto.API.Controllers
 
         [HttpPost]
         [Route("Guardar")]
-        public async Task<IActionResult> Guardar([FromBody] Vehiculo Vehiculo)
+        public async Task<IActionResult> Guardar([FromBody] Vehiculo vehiculo)
         {
             var mensaje = "";
 
             try
             {
-                var respuesta = await _service.Insertar(Vehiculo);
+                var queryVehiculos = await _service.ObtenerTodos();
+                var vehiculoMismaPlaca = queryVehiculos.Where(x=> x.NumeroPlaca == vehiculo.NumeroPlaca).FirstOrDefault();
+                if (vehiculoMismaPlaca != null)
+                    return BadRequest("No se pueden ingresar placas duplicadas");
+                var respuesta = await _service.Insertar(vehiculo);
                 if(!respuesta)
                     return BadRequest("Ocurrió un error interno");
                 mensaje = "ok";
