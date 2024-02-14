@@ -47,8 +47,8 @@ namespace Proyecto.DAL.Repositories
 
         public async Task<IQueryable<Vehiculo>> ObtenerTodos()
         {
-            IQueryable<Vehiculo> Vehiculoes = _db.Vehiculos;
-            return Vehiculoes;
+            IQueryable<Vehiculo> Vehiculos = _db.Vehiculos;
+            return Vehiculos;
         }
     }
 }
