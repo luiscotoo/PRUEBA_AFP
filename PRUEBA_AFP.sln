@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto.BLL", "Proyecto.BL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto.API", "Proyecto.API\Proyecto.API.csproj", "{339C5A1A-E0B9-4DD0-92D7-EF174E8BE9F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyecto.API.TEST", "Proyecto.API.TEST\Proyecto.API.TEST.csproj", "{59BBA2E2-2BD8-486D-A29B-C4BABD245BB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{339C5A1A-E0B9-4DD0-92D7-EF174E8BE9F9}.Release|x64.Build.0 = Release|Any CPU
 		{339C5A1A-E0B9-4DD0-92D7-EF174E8BE9F9}.Release|x86.ActiveCfg = Release|Any CPU
 		{339C5A1A-E0B9-4DD0-92D7-EF174E8BE9F9}.Release|x86.Build.0 = Release|Any CPU
+		{59BBA2E2-2BD8-486D-A29B-C4BABD245BB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59BBA2E2-2BD8-486D-A29B-C4BABD245BB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59BBA2E2-2BD8-486D-A29B-C4BABD245BB0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{59BBA2E2-2BD8-486D-A29B-C4BABD245BB0}.Debug|x64.Build.0 = Debug|Any CPU
+		{59BBA2E2-2BD8-486D-A29B-C4BABD245BB0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{59BBA2E2-2BD8-486D-A29B-C4BABD245BB0}.Debug|x86.Build.0 = Debug|Any CPU
+		{59BBA2E2-2BD8-486D-A29B-C4BABD245BB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59BBA2E2-2BD8-486D-A29B-C4BABD245BB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59BBA2E2-2BD8-486D-A29B-C4BABD245BB0}.Release|x64.ActiveCfg = Release|Any CPU
+		{59BBA2E2-2BD8-486D-A29B-C4BABD245BB0}.Release|x64.Build.0 = Release|Any CPU
+		{59BBA2E2-2BD8-486D-A29B-C4BABD245BB0}.Release|x86.ActiveCfg = Release|Any CPU
+		{59BBA2E2-2BD8-486D-A29B-C4BABD245BB0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
