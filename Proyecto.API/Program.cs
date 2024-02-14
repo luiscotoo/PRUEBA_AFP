@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Proyecto.DAL.Data;
+
 namespace Proyecto.API
 {
     public class Program
@@ -7,6 +10,11 @@ namespace Proyecto.API
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddDbContext<ApplicationDbContext>(opciones =>
+            {
+                opciones.UseSqlServer(builder.Configuration.GetConnectionString("Connection"));
+            });
+
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
